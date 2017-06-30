@@ -1,0 +1,1 @@
+"use strict";angular.module("jp",[]).service("myJSONP",["$window","$document",function(n,e){this.jsonp=function(r,a,t){var c="jsonp_fun"+Math.random().toString().replace(".","");n[c]=t;var o=-1==r.indexOf("?")?"?":"&";for(var i in a)o+=i+"="+a[i]+"&";o+="callback="+c;var d=document.createElement("script");d.src=r+o,e[0].body.appendChild(d)}}]);
